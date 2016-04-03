@@ -35,7 +35,7 @@ GERBV_OPTIONS= --export=png --dpi=$(GERBER_IMAGE_RESOLUTION) --background=$(BACK
 # .PHONY: gerbers
 # 
 
-.SECONDARY:
+.SECONDARY: .png
 
 boards := $(wildcard *.brd)
 zips := $(patsubst %.brd,%_gerber.zip,$(boards))
